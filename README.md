@@ -52,4 +52,4 @@ class EmployeeAdmin(admin.ModelAdmin):
 ![](./Screenshot%202024-03-18%20220811.png)
 
 ## RESULT
-Thus the program for creating a database using ORM hass been executed successfully
+Thus the program for creating a database using ORM hass been executed successfully.
