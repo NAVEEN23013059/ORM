@@ -1,12 +1,11 @@
 # Ex02 Django ORM Web Application
-## Date: 
+## Date:18.03.2024 
 
 ## AIM
 To develop a Django application to store and retrieve data from a Book database using Object Relational Mapping(ORM).
 
 ## Entity Relationship Diagram
-
-![alt text](<Screenshot 2024-03-21 214946.png>)
+![alt text](<Screenshot 2024-03-21 214946-1.png>)
 
 ## DESIGN STEPS
 
@@ -23,12 +22,14 @@ Enter the code for admin.py and models.py
 Execute Django admin and create details for 10 books
 
 ## PROGRAM
-
 ```py
 admins.py
-from django.contrib import admin
-from .models import Train,TrainAdmin
-admin.site.register(Train,TrainAdmin)
+from django.apps import AppConfig
+
+
+class MyappConfig(AppConfig):
+    default_auto_field = 'django.db.models.BigAutoField'
+    name = 'myapp'
 models.py
 from django.db import models
 from django.contrib import admin
@@ -43,11 +44,13 @@ class Train(models.Model):
     frequency=models.IntegerField()
 class TrainAdmin(admin.ModelAdmin):
     list_display=('train_code','train_name','distance','starting_time','ending_time','start_station_code','end_station_code','frequency')
+
 ```
 
 ## OUTPUT
-![alt text](<Screenshot 2024-03-21 214708.png>)
+![alt text](<Screenshot 2024-03-21 214708-1.png>)
 
+Include the screenshot of your admin page.
 
 
 ## RESULT
